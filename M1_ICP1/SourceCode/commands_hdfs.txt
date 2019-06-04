@@ -1,0 +1,4 @@
+1-->cd Downloads
+2-->ls
+3-->hdfs dfs -put shakespeare.txt /user/hadoop
+4-->hdfs dfs -appendToFile word_list.txt /user/hadoop/shakespeare.txt
