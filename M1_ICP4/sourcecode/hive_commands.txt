@@ -1,0 +1,55 @@
+hive commands for petrol data
+------------------------------------------------------------
+hive> create table petrol (distributer_id STRING,distributer_name STRING,amt_IN STRING,amt_OUT STRING,vol_IN INT,vol_OUT INT,year INT) row format delimited fields terminated by ',' stored as textfile;
+
+hive> load data local inpath '/home/cloudera/Downloads/Dataset/petrol.txt' into table petrol;
+
+1)In real life what is the total amount of petrol in volume sold by every distributor?
+Sol: hive> SELECT distributer_name,SUM(vol_OUT) FROM petrol GROUP BY distributer_name;
+
+2)Which are the top 10 distributors ID’s for selling petrol and also display the amount of petrol sold in volume by them individually?
+Sol: hive> SELECT distributer_id,vol_OUT FROM petrol order by vol_OUT desc limit 10;
+
+3)Find real life 10 distributor name who sold petrol in the least amount.
+Sol: hive> SELECT distributer_id,vol_OUT FROM petrol order by vol_OUT limit 10;
+
+4)List all distributors who have this difference, along with the year and the difference which they have in that year.
+Sol: hive> SELECT distributer_id,year,(vol_IN-vol_OUT) FROM petrol where (vol_IN-vol_OUT)>450;
+
+hive commands for olympic data
+-----------------------------------------------------------
+hive> create table olympic (athelete STRING,age INT,country STRING,year STRING,closing STRING,sport STRING,gold INT,silver INT,bronze INT,total INT) row format delimited fields terminated by '\t' stored as textfile;
+
+hive> load data local inpath '/home/cloudera/Downloads/Dataset/olympic_data.csv' into table olympic;
+
+1)Using the dataset list the total number of medals won by each country in swimming.
+Sol: hive> select country,SUM(total) from olympic where sport = "Swimming" GROUP BY country;
+
+2)Display real life number of medals India won year wise.
+Sol: hive> select year,SUM(total) from olympic where country = "India" GROUP BY year;
+
+3)Find the total number of medals each country won display the name along with total medals.
+Sol: hive> select country,SUM(total) from olympic GROUP BY country;
+
+4)Find the real life number of gold medals each country won.
+Sol: hive> select country,SUM(gold) from olympic GROUP BY country;
+
+5)Which country got medals for Shooting, year wise classification?
+Sol: hive> select country,SUM(total),year from olympic where sport = "Shooting" GROUP BY country,year;
+
+hive commands for Bonus
+--------------------------------------------------------------
+First we need to create two tables.
+hive> create table petrol1 (distributer_id STRING,distributer_name STRING,amt_IN STRING,amt_OUT STRING);
+
+hive> INSERT INTO petrol1(distributer_id,distributer_name,amt_in,amt_out) SELECT distributer_id,distributer_name,amt_in,amt_out FROM petrol;
+
+hive> create table petrol2 (distributer_id STRING,vol_IN INT,vol_OUT INT,year INT);
+
+hive> INSERT INTO petrol2(distributer_id,vol_IN,vol_OUT,year) SELECT distributer_id,vol_IN,vol_OUT,year FROM petrol;
+
+Using Inner Join we join the tables,
+
+hive> select distinct p1.distributer_id,p1.distributer_name,p1.amt_in,p1.amt_out,p2.vol_in,p2.vol_out,p2.year FROM petrol1 p1 JOIN petrol2 p2;
+
+hive> select distinct p1.distributer_id,p1.distributer_name,p1.amt_in,p1.amt_out,p2.vol_in,p2.vol_out,p2.year FROM petrol1 p1 JOIN petrol2 p2 ON(p1.distributer_name="reliance");
