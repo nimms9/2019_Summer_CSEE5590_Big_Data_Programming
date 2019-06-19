@@ -1,0 +1,5 @@
+John Doe,100000.0,1
+
+Mary Smith,80000.0,2
+
+Mary stephen,90000.0,3

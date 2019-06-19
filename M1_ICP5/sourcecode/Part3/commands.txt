@@ -1,0 +1,27 @@
+1. create table stocks (Dt date,val1 float,val2 float,val3 float,val4 float,val5 bigint,val6 float) row format delimited fields terminated by ',' stored as textfile;
+
+2. describe stocks;
+
+3. load data local inpath '/home/cloudera/Downloads/stocks.csv' into table stocks;
+
+4. select * from stocks limit 10;
+
+5. create table stocks (Dt date,val1 float,val2 float,val3 float,val4 float,val5 bigint,val6 float);
+
+6. describe stocks;
+
+7. sqoop export --connect jdbc:mysql://localhost/datab2 --username root --password cloudera --table stocks --export-dir /user/hive/warehouse/stocks/stocks.csv -m 1
+
+8. select * from stocks limit 10;
+
+9. analyze table stocks compute statistics;
+
+10. select word,count(1) as count from (select explode(split(dt,'-')) as word from stocks)w group by word order by word;
+
+11. select dt,val5 from stocks order by val5 DESC LIMIT 10;
+
+12. select dt,(val4-val1) from stocks where val4-val1<2;
+
+13. select dt,val4,val6,max(val5) from stocks;
+
+14. select regexp_replace('snz99@mail.umkc.edu','@.*\\.(edu)$','');

@@ -1,0 +1,11 @@
+1. hive -f tables-schemas.hql
+
+2. hadoop fs -cat /user/hive/warehouse/employees/employees.txt
+
+3. create table employees(name VARCHAR(120),salary FLOAT,id INT);
+
+4. sqoop export --connect jdbc:mysql://localhost/datab2 --username root --password cloudera --table employees --export-dir /user/hive/warehouse/employees/employees.txt -m 1
+
+5. show tables;
+
+6. select * from employees;

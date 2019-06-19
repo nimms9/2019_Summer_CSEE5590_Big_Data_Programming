@@ -1,0 +1,32 @@
+1. sudo service mysqld start;
+
+2. mysql -u root -p cloudera;
+
+3. show databases;
+
+4. create database datab2;
+
+5.use datab2;
+
+6. create table empl(emp_id INT NOT NULL AUTO_INCREMENT,emp_name VARCHAR(100),emp_sal INT,PRIMARY KEY(emp_id));
+
+7. insert into empl values(5,"sanam",50000),(6,"opra",600000),(7,"yella",7000000);
+
+8.sqoop import --connect jdbc:mysql://localhost/datab2 --username root --password cloudera --table empl --m 1
+
+9. hadoop fs -ls
+
+10. hadoop fs -ls empl/
+
+11. hadoop fs -cat empl/*
+
+12. sqoop import --connect jdbc:mysql://localhost/datab2 --username root --password cloudera --table empl --m 1 --target-dir queryresult
+
+13. hadoop fs -cat queryresult/part-m-*
+
+14. create table employee(employee_id INT NOT NULL AUTO_INCREMENT,employee_name VARCHAR(100),employee_sal INT,PRIMARY KEY(employee_id));
+
+15. sqoop export --connect jdbc:mysql://localhost/datab2 --username root --password cloudera --table employee --export-dir queryresult/part-m-00000
+
+16. select * from employee;
+ 

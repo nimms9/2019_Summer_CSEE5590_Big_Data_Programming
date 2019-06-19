@@ -1,0 +1,1 @@
+1. create table wordcount as select word,count(1) as count from (select explode(split(dt,'-')) as word from stocks)w group by word order by word;
