@@ -1,0 +1,7 @@
+1. solrctl instancedir --generate $HOME/solr_configs1
+
+2. solrctl instancedir --create newcollection $HOME/solr_conf
+
+3. solrctl collection --create newcollection -s 1
+
+4. solrctl instancedir --list

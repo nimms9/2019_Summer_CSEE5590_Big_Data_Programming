@@ -1,0 +1,11 @@
+1. solrctl instancedir --generate /tmp/films
+
+2. ls /tmp/films
+
+3. ls /tmp/films/conf
+
+4. gedit /tmp/films/conf/schema.xml
+
+5. solrctl instancedir --create films /tmp/films
+
+6. solrctl collection --create films
