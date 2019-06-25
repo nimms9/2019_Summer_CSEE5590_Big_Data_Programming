@@ -1,0 +1,10 @@
+1. Download the cassandra .tar.gz(apache-cassandra-3.11.3)
+
+2. Install jdk 1.8.191 and python 2.7.15.
+
+3. Open cmd Go to apache-cassandra-3.11.3/bin and type the command "cassandra.bat -f" and then wait till it displays like "INFO superuser default.....".
+
+4. After above step open another cmd and redirect to the directory apache-cassandra-3.11.3/bin and then type the command "cqlsh"
+
+5. You can see the cqlsh running now
+ 
