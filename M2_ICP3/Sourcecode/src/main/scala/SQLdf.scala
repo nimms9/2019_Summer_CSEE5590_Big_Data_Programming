@@ -59,7 +59,8 @@ object SQLdf {
 
     val DupDF = spark.sql("select COUNT(*),Country,Timestamp from survey GROUP By Timestamp,Country Having COUNT(*) > 1")
     //println("Check duplicate")
-    val uniq=df.dropDuplicates().show()
+    //val uniq=df.dropDuplicates().show()
+    val uniq= df.groupBy("Timestamp","Age","Gender","Country","state","self_employed","family_history","treatment","work_interfere","no_employees","remote_work","tech_company","benefits","care_options").count.filter($"count">1).show()
     val total=df.count()
     //DupDF.show(50)
     println("no of duplicate records:"+uniq)
