@@ -34,7 +34,7 @@ Execution
 Output
 ======
 
-.. image:: C:\\Users\\Lenovo\\PycharmProjects\\spark-streaming\\snap.png
+.. image:: snap.png
    :width: 400px
 
 
