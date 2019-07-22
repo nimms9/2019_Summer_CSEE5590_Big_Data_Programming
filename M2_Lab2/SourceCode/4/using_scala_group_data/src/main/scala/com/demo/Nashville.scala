@@ -10,11 +10,11 @@ import org.apache.spark.rdd.RDD
 object Nashville {
   def main(args: Array[String]): Unit = {
     System.setProperty("hadoop.home.dir", "C:\\winutils");
-    val conf = new SparkConf().setMaster("local[2]").setAppName("PAGE RANK")
+    val conf = new SparkConf().setMaster("local[2]").setAppName("PAGE_RANK")
     val sc = new SparkContext(conf)
     val spark = SparkSession
       .builder()
-      .appName("PAGE RANK")
+      .appName("PAGE_RANK")
       .config(conf =conf)
       .getOrCreate()
 
@@ -22,17 +22,17 @@ object Nashville {
     Logger.getLogger("org").setLevel(Level.ERROR)
     Logger.getLogger("akka").setLevel(Level.ERROR)
 
-    val edges_df = spark.read
-      .format("csv")
-      .option("header", "true") //reading the headers
-      .option("mode", "DROPMALFORMED")
-      .load("C:\\Users\\Lenovo\\IdeaProjects\\M2_Lab2_4\\group-edges.csv")
-
     val groups_df = spark.read
       .format("csv")
       .option("header", "true") //reading the headers
       .option("mode", "DROPMALFORMED")
       .load("C:\\Users\\Lenovo\\IdeaProjects\\M2_Lab2_4\\meta-groups.csv")
+
+    val edges_df = spark.read
+      .format("csv")
+      .option("header", "true") //reading the headers
+      .option("mode", "DROPMALFORMED")
+      .load("C:\\Users\\Lenovo\\IdeaProjects\\M2_Lab2_4\\group-edges.csv")
 
 
 
@@ -48,17 +48,17 @@ object Nashville {
     groups_df.createOrReplaceTempView("g")
 
 
-    val g1 = spark.sql("select * from g")
+    val g2 = spark.sql("select * from g")
 
-    val e1 = spark.sql("select * from e")
+    val e2 = spark.sql("select * from e")
 
-    val vertices = g1
-      .withColumnRenamed("group_id", "id").limit(100)
+    val vertices = g2
+      .withColumnRenamed("group_id", "id").limit(200)
       .distinct()
 
-    val edges = e1
-      .withColumnRenamed("group1", "src").limit(500).distinct()
-      .withColumnRenamed("group2", "dst").limit(500).distinct()
+    val edges = e2
+      .withColumnRenamed("group1", "src").limit(600).distinct()
+      .withColumnRenamed("group2", "dst").limit(600).distinct()
 
 
     val graph = GraphFrame(vertices, edges)
