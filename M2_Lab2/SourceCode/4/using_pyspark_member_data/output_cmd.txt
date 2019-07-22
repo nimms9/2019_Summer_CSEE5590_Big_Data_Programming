@@ -1,0 +1,170 @@
+C:\spark-2.3.1-bin-hadoop2.7\bin>SET HADOOP_HOME="C:\winutils"
+
+C:\spark-2.3.1-bin-hadoop2.7\bin>spark-submit --packages graphframes:graphframes:0.7.0-spark2.3-s_2.11 C:\\Users\\Lenovo\\Documents\\UMKC_SEMS\\UMKC_summer_sem\\M2_Lab2_4\\1.py
+Ivy Default Cache set to: C:\Users\Lenovo\.ivy2\cache
+The jars for the packages stored in: C:\Users\Lenovo\.ivy2\jars
+:: loading settings :: url = jar:file:/C:/spark-2.3.1-bin-hadoop2.7/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+graphframes#graphframes added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-e9b26b29-86a4-498e-9290-b0fccdef5d26;1.0
+        confs: [default]
+        found graphframes#graphframes;0.7.0-spark2.3-s_2.11 in spark-packages
+        found org.slf4j#slf4j-api;1.7.16 in spark-list
+:: resolution report :: resolve 217ms :: artifacts dl 6ms
+        :: modules in use:
+        graphframes#graphframes;0.7.0-spark2.3-s_2.11 from spark-packages in [default]
+        org.slf4j#slf4j-api;1.7.16 from spark-list in [default]
+        ---------------------------------------------------------------------
+        |                  |            modules            ||   artifacts   |
+        |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+        ---------------------------------------------------------------------
+        |      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+        ---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-e9b26b29-86a4-498e-9290-b0fccdef5d26
+        confs: [default]
+        0 artifacts copied, 2 already retrieved (0kB/0ms)
+2019-07-22 02:39:12 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2019-07-22 02:39:13 INFO  SparkContext:54 - Running Spark version 2.3.1
+2019-07-22 02:39:13 INFO  SparkContext:54 - Submitted application: Lab 4
+2019-07-22 02:39:13 INFO  SecurityManager:54 - Changing view acls to: Lenovo
+2019-07-22 02:39:13 INFO  SecurityManager:54 - Changing modify acls to: Lenovo
+2019-07-22 02:39:13 INFO  SecurityManager:54 - Changing view acls groups to:
+2019-07-22 02:39:13 INFO  SecurityManager:54 - Changing modify acls groups to:
+2019-07-22 02:39:13 INFO  SecurityManager:54 - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(Lenovo); groups with view permissions: Set(); users  with modify permissions: Set(Lenovo); groups with modify permissions: Set()
+2019-07-22 02:39:14 INFO  Utils:54 - Successfully started service 'sparkDriver' on port 36459.
+2019-07-22 02:39:14 INFO  SparkEnv:54 - Registering MapOutputTracker
+2019-07-22 02:39:14 INFO  SparkEnv:54 - Registering BlockManagerMaster
+2019-07-22 02:39:14 INFO  BlockManagerMasterEndpoint:54 - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2019-07-22 02:39:14 INFO  BlockManagerMasterEndpoint:54 - BlockManagerMasterEndpoint up
+2019-07-22 02:39:14 INFO  DiskBlockManager:54 - Created local directory at C:\Users\Lenovo\AppData\Local\Temp\blockmgr-8a9c6251-fbcc-4ea4-ab33-4b69f8ed7393
+2019-07-22 02:39:14 INFO  MemoryStore:54 - MemoryStore started with capacity 366.3 MB
+2019-07-22 02:39:14 INFO  SparkEnv:54 - Registering OutputCommitCoordinator
+2019-07-22 02:39:14 INFO  log:192 - Logging initialized @3347ms
+2019-07-22 02:39:14 INFO  Server:346 - jetty-9.3.z-SNAPSHOT
+2019-07-22 02:39:14 INFO  Server:414 - Started @3472ms
+2019-07-22 02:39:14 INFO  AbstractConnector:278 - Started ServerConnector@347ca687{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2019-07-22 02:39:14 INFO  Utils:54 - Successfully started service 'SparkUI' on port 4040.
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@6dc1d062{/jobs,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@379d7115{/jobs/json,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@6af5b8a7{/jobs/job,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3a795d23{/jobs/job/json,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@66b096a0{/stages,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@21473a51{/stages/json,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@58631795{/stages/stage,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@52e96166{/stages/stage/json,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@12f60b11{/stages/pool,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@240cf491{/stages/pool/json,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4c7efdde{/storage,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@55855766{/storage/json,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@77096044{/storage/rdd,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3462aa48{/storage/rdd/json,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@fc93117{/environment,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@700869ef{/environment/json,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4cbf3cea{/executors,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@6daeefdf{/executors/json,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2ba92af4{/executors/threadDump,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@185d797f{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2db05ef2{/static,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@28d20c02{/,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3441fa33{/api,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@420d9607{/jobs/job/kill,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@44c8b9dd{/stages/stage/kill,null,AVAILABLE,@Spark}
+2019-07-22 02:39:14 INFO  SparkUI:54 - Bound SparkUI to 0.0.0.0, and started at http://DESKTOP-N26PMEI:4040
+2019-07-22 02:39:15 INFO  SparkContext:54 - Added JAR file:///C:/Users/Lenovo/.ivy2/jars/graphframes_graphframes-0.7.0-spark2.3-s_2.11.jar at spark://DESKTOP-N26PMEI:36459/jars/graphframes_graphframes-0.7.0-spark2.3-s_2.11.jar with timestamp 1563781155096
+2019-07-22 02:39:15 INFO  SparkContext:54 - Added JAR file:///C:/Users/Lenovo/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar at spark://DESKTOP-N26PMEI:36459/jars/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1563781155096
+2019-07-22 02:39:15 INFO  SparkContext:54 - Added file file:/C:/Users/Lenovo/Documents/UMKC_SEMS/UMKC_summer_sem/M2_Lab2_4/1.py at file:/C:/Users/Lenovo/Documents/UMKC_SEMS/UMKC_summer_sem/M2_Lab2_4/1.py with timestamp 1563781155143
+2019-07-22 02:39:15 INFO  Utils:54 - Copying C:\Users\Lenovo\Documents\UMKC_SEMS\UMKC_summer_sem\M2_Lab2_4\1.py to C:\Users\Lenovo\AppData\Local\Temp\spark-2f698fa2-385e-4e4d-b625-b1ebbe7283eb\userFiles-47c47a4c-bc94-4078-8f9b-25b6efae006b\1.py
+2019-07-22 02:39:15 INFO  SparkContext:54 - Added file file:///C:/Users/Lenovo/.ivy2/jars/graphframes_graphframes-0.7.0-spark2.3-s_2.11.jar at file:///C:/Users/Lenovo/.ivy2/jars/graphframes_graphframes-0.7.0-spark2.3-s_2.11.jar with timestamp 1563781155814
+2019-07-22 02:39:15 INFO  Utils:54 - Copying C:\Users\Lenovo\.ivy2\jars\graphframes_graphframes-0.7.0-spark2.3-s_2.11.jar to C:\Users\Lenovo\AppData\Local\Temp\spark-2f698fa2-385e-4e4d-b625-b1ebbe7283eb\userFiles-47c47a4c-bc94-4078-8f9b-25b6efae006b\graphframes_graphframes-0.7.0-spark2.3-s_2.11.jar
+2019-07-22 02:39:16 INFO  SparkContext:54 - Added file file:///C:/Users/Lenovo/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar at file:///C:/Users/Lenovo/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1563781156131
+2019-07-22 02:39:16 INFO  Utils:54 - Copying C:\Users\Lenovo\.ivy2\jars\org.slf4j_slf4j-api-1.7.16.jar to C:\Users\Lenovo\AppData\Local\Temp\spark-2f698fa2-385e-4e4d-b625-b1ebbe7283eb\userFiles-47c47a4c-bc94-4078-8f9b-25b6efae006b\org.slf4j_slf4j-api-1.7.16.jar
+2019-07-22 02:39:16 INFO  Executor:54 - Starting executor ID driver on host localhost
+2019-07-22 02:39:16 INFO  Utils:54 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 36500.
+2019-07-22 02:39:16 INFO  NettyBlockTransferService:54 - Server created on DESKTOP-N26PMEI:36500
+2019-07-22 02:39:16 INFO  BlockManager:54 - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2019-07-22 02:39:16 INFO  BlockManagerMaster:54 - Registering BlockManager BlockManagerId(driver, DESKTOP-N26PMEI, 36500, None)
+2019-07-22 02:39:16 INFO  BlockManagerMasterEndpoint:54 - Registering block manager DESKTOP-N26PMEI:36500 with 366.3 MB RAM, BlockManagerId(driver, DESKTOP-N26PMEI, 36500, None)
+2019-07-22 02:39:16 INFO  BlockManagerMaster:54 - Registered BlockManager BlockManagerId(driver, DESKTOP-N26PMEI, 36500, None)
+2019-07-22 02:39:16 INFO  BlockManager:54 - Initialized BlockManager: BlockManagerId(driver, DESKTOP-N26PMEI, 36500, None)
+2019-07-22 02:39:16 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3266cca1{/metrics/json,null,AVAILABLE,@Spark}
+2019-07-22 02:39:16 INFO  SharedState:54 - Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/C:/spark-2.3.1-bin-hadoop2.7/bin/spark-warehouse/').
+2019-07-22 02:39:16 INFO  SharedState:54 - Warehouse path is 'file:/C:/spark-2.3.1-bin-hadoop2.7/bin/spark-warehouse/'.
+2019-07-22 02:39:16 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7efaa452{/SQL,null,AVAILABLE,@Spark}
+2019-07-22 02:39:16 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@74ede78f{/SQL/json,null,AVAILABLE,@Spark}
+2019-07-22 02:39:16 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@67c51e77{/SQL/execution,null,AVAILABLE,@Spark}
+2019-07-22 02:39:16 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@104e9fac{/SQL/execution/json,null,AVAILABLE,@Spark}
+2019-07-22 02:39:16 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@72f9006c{/static/sql,null,AVAILABLE,@Spark}
+2019-07-22 02:39:17 INFO  StateStoreCoordinatorRef:54 - Registered StateStoreCoordinator endpoint
++---------+------------------+
+|id       |pagerank          |
++---------+------------------+
+|7848668  |0.7409105228055258|
+|145573412|0.4191035572807095|
+|211406247|0.4191035572807095|
+|41985802 |0.4191035572807095|
+|183125840|0.7673888142364493|
+|219037159|0.7545570380374939|
+|226811920|0.4191035572807095|
+|188126267|0.4191035572807095|
+|57507522 |4.170353085963747 |
+|201765390|0.6686779835828749|
++---------+------------------+
+only showing top 10 rows
+
++------+---------+---------------------+
+|src   |dst      |weight               |
++------+---------+---------------------+
+|2069  |113522242|0.0024154589371980675|
+|2069  |184268293|0.0024154589371980675|
+|2069  |211844922|0.0024154589371980675|
+|9205  |5175848  |0.0020876826722338203|
+|9205  |81196252 |0.0020876826722338203|
+|9205  |207502711|0.0020876826722338203|
+|9205  |210687500|0.0020876826722338203|
+|9205  |219268686|0.0020876826722338203|
+|106758|203089059|0.005747126436781609 |
+|303336|16003291 |0.005714285714285714 |
++------+---------+---------------------+
+only showing top 10 rows
+
+2019-07-22 02:40:16 ERROR ShutdownHookManager:91 - Exception while deleting Spark temp dir: C:\Users\Lenovo\AppData\Local\Temp\spark-2f698fa2-385e-4e4d-b625-b1ebbe7283eb\userFiles-47c47a4c-bc94-4078-8f9b-25b6efae006b
+java.io.IOException: Failed to delete: C:\Users\Lenovo\AppData\Local\Temp\spark-2f698fa2-385e-4e4d-b625-b1ebbe7283eb\userFiles-47c47a4c-bc94-4078-8f9b-25b6efae006b
+        at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1073)
+        at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:65)
+        at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:62)
+        at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+        at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+        at org.apache.spark.util.ShutdownHookManager$$anonfun$1.apply$mcV$sp(ShutdownHookManager.scala:62)
+        at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1991)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+        at scala.util.Try$.apply(Try.scala:192)
+        at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+        at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+2019-07-22 02:40:16 ERROR ShutdownHookManager:91 - Exception while deleting Spark temp dir: C:\Users\Lenovo\AppData\Local\Temp\spark-2f698fa2-385e-4e4d-b625-b1ebbe7283eb
+java.io.IOException: Failed to delete: C:\Users\Lenovo\AppData\Local\Temp\spark-2f698fa2-385e-4e4d-b625-b1ebbe7283eb
+        at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1073)
+        at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:65)
+        at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:62)
+        at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+        at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+        at org.apache.spark.util.ShutdownHookManager$$anonfun$1.apply$mcV$sp(ShutdownHookManager.scala:62)
+        at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1991)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+        at scala.util.Try$.apply(Try.scala:192)
+        at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+        at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+
+C:\spark-2.3.1-bin-hadoop2.7\bin>
